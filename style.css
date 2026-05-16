@@ -1,0 +1,112 @@
+/* --- ESTILOS DE BASE --- */
+body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden; background-color: #0f1a10;
+}
+
+.page-container {
+    position: relative; width: 100%; height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover; background-position: center;
+    display: flex; flex-direction: column; color: #f0f7f0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* --- BOTÓN REGRESAR --- */
+.back-arrow {
+    position: fixed; top: 100px; left: 40px; z-index: 1100;
+    background: rgba(45, 90, 39, 0.8); color: white;
+    width: 50px; height: 50px; border-radius: 50%;
+    display: none; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 1.5rem; border: 1px solid #7cb342;
+    transition: 0.3s;
+}
+.back-arrow:hover { background: #2e7d32; transform: scale(1.1); }
+
+/* --- ENCABEZADO --- */
+header { 
+    padding: 20px 40px; display: flex; align-items: center; 
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000; 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+.logo-placeholder { font-size: 2.8rem; margin-right: 15px; }
+.logo-text { font-weight: bold; font-size: 1.1rem; line-height: 1.2; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; }
+
+/* --- SECCIÓN HERO --- */
+.hero-section {
+    flex-grow: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    transition: opacity 0.4s ease;
+}
+.hero-title { font-size: 4.5rem; margin: 0; color: #f0f0f0; }
+.hero-subtitle {
+    background-color: rgba(45, 90, 39, 0.85); padding: 10px 30px; 
+    border-radius: 5px; font-size: 1.4rem; margin-top: 15px; 
+    font-family: Arial, sans-serif; border: 1px solid #7cb342;
+}
+
+/* --- PANELES DE CONTENIDO --- */
+.content-panel-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(15, 26, 16, 0.98); display: none;
+    z-index: 50; opacity: 0; transition: opacity 0.5s ease;
+    overflow-y: auto; padding-top: 100px; padding-bottom: 120px;
+}
+.content-panel-overlay.show { display: block; opacity: 1; }
+.content-panel { max-width: 900px; margin: 40px auto; padding: 40px; color: #e0e0e0; font-family: Arial, sans-serif; text-shadow: none; }
+
+/* --- HISTORIA --- */
+.historia-row { display: flex; align-items: center; gap: 45px; margin-bottom: 65px; }
+.historia-row.reverse { flex-direction: row-reverse; }
+.historia-text { flex: 1; }
+.historia-text h3 { color: #8bc34a; font-size: 1.8rem; margin-bottom: 15px; border-bottom: 1px solid #558b2f; display: inline-block; }
+.historia-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px; color: #dcedc8; }
+.visual-box {
+    flex: 0.7; height: 250px; background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(139, 195, 74, 0.3); border-radius: 15px;
+    display: flex; align-items: center; justify-content: center; font-size: 5rem;
+}
+
+/* --- CRONOLOGÍA --- */
+.timeline-container { display: flex; flex-direction: column; gap: 20px; }
+.timeline-item { 
+    background: rgba(255, 255, 255, 0.03); padding: 25px; 
+    border-left: 5px solid #558b2f; border-radius: 0 15px 15px 0;
+    height: auto; 
+}
+.year { color: #fb8c00; font-size: 1.4rem; font-weight: bold; display: block; margin-bottom: 10px; }
+
+/* --- TESTIMONIOS --- */
+.testimonios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+.testimonio-card { background: rgba(255,255,255,0.04); padding: 30px; border-radius: 20px; border-left: 5px solid #bf360c; }
+.testimonio-card strong { color: #fb8c00; display: block; margin-bottom: 10px; font-size: 1.2rem; }
+.testimonio-card p { font-style: italic; color: #ccc; line-height: 1.6; }
+
+/* --- ESPECIES --- */
+.especies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+.especie-card { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid #33691e; }
+.especie-card h4 { color: #fb8c00; margin-top: 0; font-size: 1.3rem; }
+
+/* --- NAVEGACIÓN TABS --- */
+.nav-tabs { display: flex; width: 100%; position: absolute; bottom: 0; left: 0; z-index: 100; box-shadow: 0 -5px 20px rgba(0,0,0,0.3); }
+.nav-tab {
+    flex: 1; text-align: center; padding: 25px; font-weight: bold;
+    font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease;
+    color: white; border: none; text-transform: uppercase; letter-spacing: 1px;
+}
+.nav-tab.historia { background: #2e7d32; }
+.nav-tab.timeline { background: #558b2f; }
+.nav-tab.testimonios { background: #8d6e63; }
+.nav-tab.especies { background: #bf360c; }
+.nav-tab.active { transform: translateY(-10px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); z-index: 101; filter: brightness(0.8); }
+
+.hide-hero .hero-section { opacity: 0; pointer-events: none; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .historia-row, .historia-row.reverse { flex-direction: column; text-align: center; }
+    .hero-title { font-size: 2.5rem; }
+    .testimonios-grid { grid-template-columns: 1fr; }
+    .nav-tab { padding: 15px 5px; font-size: 0.7rem; }
+}

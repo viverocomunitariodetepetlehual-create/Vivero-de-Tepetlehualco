@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero Comunitario de Tepetlehualco - Memoria Viva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="mainContainer" class="page-container">
+        
+        <div id="backArrow" class="back-arrow" onclick="regresarAlInicio()">←</div>
+
+        <header onclick="window.location.reload()" style="cursor:pointer">
+            <div class="logo-placeholder">🌿</div>
+            <div class="logo-text">Vivero Comunitario<br>Tepetlehualco</div>
+        </header>
+
+        <section class="hero-section">
+            <h1 class="hero-title">Patrimonio Biocultural</h1>
+            <span class="hero-subtitle">Rescate y Gestión Documental de San Pablo Oztotepec</span>
+        </section>
+
+        <div id="panelHistoria" class="content-panel-overlay">
+            <div class="content-panel">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <h2 style="font-size: 3rem; color: #8bc34a; margin-bottom: 10px;">Nuestra Historia</h2>
+                    <div style="width: 80px; height: 3px; background: #558b2f; margin: 0 auto;"></div>
+                </div>
+                <div class="historia-row">
+                    <div class="historia-text">
+                        <h3>Origen y Resistencia (1987)</h3>
+                        <p>Tras décadas de explotación forestal por empresas como Loreto y Peña, la comunidad de San Pablo Oztotepec decidió en asamblea el 13 de diciembre de 1987 recuperar sus tierras[cite: 136, 137].</p>
+                        <p>Este espacio nació como una iniciativa vinculada a la conservación del bosque y la defensa del territorio, convirtiéndose en un referente de resistencia ecológica[cite: 3, 131].</p>
+                    </div>
+                    <div class="visual-box">🏔️</div>
+                </div>
+                <div class="historia-row reverse">
+                    <div class="historia-text">
+                        <h3>Gestión de la Memoria</h3>
+                        <p>La investigación busca mitigar el riesgo de pérdida de memoria histórica frente al relevo generacional, digitalizando conocimientos que antes solo vivían en la tradición oral[cite: 4, 118].</p>
+                        <p>Se aplican procesos archivísticos de limpieza, clasificación y digitalización para asegurar la permanencia de este patrimonio biocultural[cite: 6, 116].</p>
+                    </div>
+                    <div class="visual-box">📂</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="panelTimeline" class="content-panel-overlay">
+            <div class="content-panel">
+                <h2 style="text-align: center; color:#8bc34a; font-size: 2.5rem; margin-bottom: 40px;">Hitos del Vivero</h2>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <strong class="year">13 de Diciembre de 1987</strong>
+                        <p><strong>Fundación:</strong> Recuperación del predio y establecimiento formal mediante acuerdos comunitarios tras la asamblea general[cite: 22, 136].</p>
+                    </div>
+                    <div class="timeline-item">
+                        <strong class="year">Década de 1990</strong>
+                        <p><strong>Diversificación:</strong> Época dorada con el establecimiento de un venadario de venado cola blanca, producción de hongo seta y un fuerte programa de educación ambiental con escuelas[cite: 65, 133, 207].</p>
+                    </div>
+                    <div class="timeline-item">
+                        <strong class="year">2026 - Actualidad</strong>
+                        <p><strong>Rescate Documental:</strong> Inicio de la gestión archivística profesional para organizar, conservar y digitalizar los documentos históricos y testimonios orales[cite: 34, 36, 115].</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="panelTestimonios" class="content-panel-overlay">
+            <div class="content-panel">
+                <h2 style="text-align: center; color:#8bc34a;">Voces del Territorio</h2>
+                <div class="testimonios-grid">
+                    <div class="testimonio-card">
+                        <strong>Agustín Martínez Villagrán</strong>
+                        <p>"La participación dentro del vivero nunca fue percibida como un sacrificio, sino como una actividad motivada por el interés colectivo de seguir conservando el bosque más bonito de la Ciudad de México"[cite: 131].</p>
+                    </div>
+                    <div class="testimonio-card">
+                        <strong>María Magdalena García</strong>
+                        <p>"El objetivo principal siempre fue generar conciencia sobre la conservación de los recursos naturales, especialmente entre niños y jóvenes de las escuelas cercanas"[cite: 139].</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="panelEspecies" class="content-panel-overlay">
+            <div class="content-panel">
+                <h2 style="text-align: center; color:#8bc34a;">Especies Forestales Nativas</h2>
+                <div class="especies-grid">
+                    <div class="especie-card">
+                        <h4>Pino Montezumae</h4>
+                        <p>Especie forestal nativa fundamental para la recuperación del ecosistema local producida en el vivero[cite: 65, 209].</p>
+                    </div>
+                    <div class="especie-card">
+                        <h4>Oyamel</h4>
+                        <p>Especie clave para la conservación del bosque comunal, producida bajo esquemas de trabajo comunitario[cite: 65, 209].</p>
+                    </div>
+                    <div class="especie-card">
+                        <h4>Encino</h4>
+                        <p>Producción orientada a mantener la biodiversidad y la resiliencia del territorio frente al cambio climático[cite: 99, 209].</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab historia" onclick="activarPestaña('panelHistoria', this)">Historia</button>
+            <button class="nav-tab timeline" onclick="activarPestaña('panelTimeline', this)">Cronología</button>
+            <button class="nav-tab testimonios" onclick="activarPestaña('panelTestimonios', this)">Testimonios</button>
+            <button class="nav-tab especies" onclick="activarPestaña('panelEspecies', this)">Especies</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
